@@ -1,0 +1,293 @@
+/* Reset básico para margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff; /* Texto branco para contraste */
+    background: linear-gradient(135deg, #000000, #003366); /* Gradiente de preto para azul escuro */
+}
+
+/* Cabeçalho */
+header {
+    background: #000; /* Preto sólido para o cabeçalho */
+    color: #fff; /* Texto branco */
+    padding: 1rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Logo */
+#logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem; /* Espaço abaixo da logo */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+/* Navegação */
+nav {
+    background: #001f3f; /* Azul escuro para a navegação */
+    padding: 0.5rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #003366; /* Azul mais escuro no hover */
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Seções */
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #e0e0e0; /* Cinza claro para contraste */
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Artigos dos Produtos */
+article {
+    background: #001f3f; /* Azul escuro para artigos */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+article img {
+    max-width: 200px;
+    margin-right: 1rem;
+}
+
+article h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+article p {
+    margin-bottom: 0.5rem;
+}
+
+/* Banner da Home */
+.home-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../imgs/home_banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid #003366; /* Azul escuro como borda */
+}
+
+.home-banner h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home-banner p {
+    font-size: 1.2rem;
+}
+
+/* Produtos em Destaque */
+.home-products {
+    display: flex; /* Exibe os produtos em linha */
+    justify-content: space-between; /* Distribui espaço entre os produtos */
+    gap: 1rem; /* Espaçamento entre os produtos */
+    margin-top: 2rem;
+}
+
+.home-products .product {
+    flex: 1; /* Permite que cada produto se expanda igualmente */
+    max-width: 30%; /* Limita a largura máxima de cada produto */
+}
+
+.home-products .product a {
+    display: block; /* Garante que o link ocupe toda a área do produto */
+}
+
+.home-products .product img {
+    width: 100%; /* Garante que a imagem ocupe a largura total do contêiner do produto */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas para as imagens */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra ao redor da imagem */
+    transition: transform 0.3s; /* Transição suave para efeitos de hover */
+}
+
+.home-products .product img:hover {
+    transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse sobre a imagem */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .home-products {
+        flex-direction: column; /* Alinha os produtos verticalmente em telas menores */
+    }
+
+    .home-products .product {
+        max-width: 100%; /* Permite que cada produto ocupe a largura total em telas menores */
+        margin-bottom: 1rem; /* Espaçamento inferior entre produtos em telas menores */
+    }
+}
+
+/* Mapa */
+iframe {
+    border: 0;
+    width: 100%;
+    height: 450px;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
+    background: #000; /* Preto sólido para o rodapé */
+    color: #fff; /* Texto branco */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.payment-methods,
+.owner-info {
+    flex: 1;
+}
+
+.payment-methods {
+    text-align: left;
+}
+
+.owner-info {
+    text-align: right;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Página de Basquete */
+.basketball-page {
+    background: #001f3f; /* Azul escuro para a página de basquete */
+    color: #fff;
+}
+
+.basketball-page .section-content {
+    padding: 2rem;
+}
+
+.basketball-page img {
+    border-radius: 8px;
+}
+
+/* Página de Futebol */
+.football-page {
+    background: #003366; /* Azul ainda mais escuro para a página de futebol */
+    color: #fff;
+}
+
+.football-page .section-content {
+    padding: 2rem;
+}
+
+.football-page img {
+    border-radius: 8px;
+}
+
+/* Página de Fórmula 1 */
+.formula1-page {
+    background: #000; /* Preto para a página de Fórmula 1 */
+    color: #fff;
+}
+
+.formula1-page .section-content {
+    padding: 2rem;
+}
+
+.formula1-page img {
+    border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .home-products {
+        flex-direction: column;
+    }
+}
+  
